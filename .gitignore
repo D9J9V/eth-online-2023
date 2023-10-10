@@ -1,4 +1,8 @@
 node_modules
+# vim
+\~
+\~/
+\~/*
 
 # dependencies, yarn, etc
 # yarn / eslint
