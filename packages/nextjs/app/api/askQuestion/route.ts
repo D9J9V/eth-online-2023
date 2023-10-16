@@ -1,22 +1,20 @@
-import query from "../../lib/queryApi";
+import query from "@/app/api/queryApi";
 import { adminDb } from "@/firebaseAdmin";
 import admin from "firebase-admin";
-import type { NextApiRequest, NextApiResponse } from "next";
 
-type Data = {
-  answer: string;
-};
+async function handler(req: Request, res: Response) {
+  // Acceder al cuerpo de la solicitud
+  const requestBody = await req.json();
+  console.log(res);
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
-  const { prompt, chatId, model, session } = req.body;
+  // Desestructurar los datos del cuerpo
+  const { prompt, chatId, model, session } = requestBody;
 
   if (!prompt) {
-    res.status(400).json({ answer: "No prompt provided" });
-    return;
+    return new Response("No prompt provided");
   }
   if (!chatId) {
-    res.status(400).json({ answer: "No chatId provided" });
-    return;
+    return new Response("No chatId provided");
   }
 
   const response = await query(prompt, chatId, model);
@@ -30,6 +28,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
       avatar: "https://links.papareact.com/89k",
     },
   };
+
   await adminDb
     .collection("users")
     .doc(session?.user?.email)
@@ -38,5 +37,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     .collection("messages")
     .add(message);
 
-  res.status(200).json({ answer: message.text });
+  return new Response(JSON.stringify({ answer: message.text }), {
+    status: 200,
+    headers: { "Content-Type": "application/json" },
+  });
 }
+
+export { handler as POST, handler as GET };

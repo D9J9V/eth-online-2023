@@ -1,7 +1,9 @@
 import Link from "next/link";
+import "@rainbow-me/rainbowkit/styles.css";
 import type { NextPage } from "next";
 import { BugAntIcon, MagnifyingGlassIcon, SparklesIcon } from "@heroicons/react/24/outline";
 import { MetaHeader } from "~~/components/MetaHeader";
+import "~~/styles/globals.css";
 
 const Home: NextPage = () => {
   return (
