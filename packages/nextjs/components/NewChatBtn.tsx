@@ -8,26 +8,26 @@ function NewChatBtn() {
   const router = useRouter();
   const { data: session } = useSession();
 
-  const isID = session && session.user && session.user.email ? session.user.email : undefined;
   const createNewChat = async () => {
-    try {
-      if (isID !== undefined) {
-        const doc = await addDoc(collection(db, "users", isID, "chats"), {
-          userID: isID,
-          createdAt: serverTimestamp(),
-        });
-
-        router.push(`/chat/${doc.id}`);
-      }
-    } catch (error) {
-      alert(error);
+    if (!session || !session.user || !session.user.email) {
+      // Handle the case where session or user data is missing.
+      return;
     }
+
+    const userEmail = session.user.email;
+
+    const doc = await addDoc(collection(db, "users", userEmail, "chats"), {
+      userID: userEmail,
+      createdAt: serverTimestamp(),
+    });
+
+    router.push(`/chat/${doc.id}`);
   };
 
   return (
     <div onClick={createNewChat} className="border-gray-700 border chatRow">
-      <PlusCircleIcon className="h-4 w-4" />
       <p>New Chat</p>
+      <PlusCircleIcon className="h-4 w-4" />
     </div>
   );
 }

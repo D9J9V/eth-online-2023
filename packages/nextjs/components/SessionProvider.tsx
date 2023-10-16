@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect } from "react";
 import { Session } from "next-auth";
 import { SessionProvider as Provider } from "next-auth/react";
 
@@ -10,9 +9,7 @@ type Props = {
 };
 
 function SessionProvider({ children, session }: Props) {
-  useEffect(() => {
-    console.log(session);
-  }, [session]);
+  console.log(session);
   return <Provider>{children}</Provider>;
 }
 
