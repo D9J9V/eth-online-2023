@@ -47,7 +47,10 @@ function SideBar() {
       </div>
 
       {session && (
-        <div className="rounded-full h-12 w-12 cursor-pointer mb-2 mx-auto hover:opacity-50" onClick={() => signOut()}>
+        <div
+          className="rounded-full h-12 w-12 cursor-pointer mb-2 mx-auto hover:animate-pulse"
+          onClick={() => signOut()}
+        >
           {session.user?.image && (
             <Image
               src={session.user.image}
@@ -61,7 +64,7 @@ function SideBar() {
         </div>
       )}
       <button
-        className="rounded-xl h-12 px-10 cursor-pointer bg-gray-100 mx-auto hover:opacity-50"
+        className="rounded-xl h-12 px-10 cursor-pointer bg-gray-100 mx-auto hover:animate-pulse"
         onClick={() => signOut()}
       >
         Sign Out
