@@ -34,7 +34,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
               {/* ClientProvider - Notifications*/}
               <ClientProvider />
 
-              <div className="bg-neutral flex-1"> {children}</div>
+              <div className="bg-primary flex-1"> {children}</div>
             </div>
           )}
         </SessionProvider>

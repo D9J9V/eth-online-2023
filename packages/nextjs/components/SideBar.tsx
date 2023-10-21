@@ -21,7 +21,7 @@ function SideBar() {
   );
 
   return (
-    <div className="p-2 text-neutral flex flex-col h-screen bg-secondary">
+    <div className="p-2 text-neutral flex flex-col h-screen bg-neutral shadow-lg">
       <div className="flex-1">
         <div>
           {/* New Chat btn */}
@@ -61,7 +61,7 @@ function SideBar() {
         </div>
       )}
       <button
-        className="rounded-xl h-12 px-10 cursor-pointer bg-primary mx-auto hover:opacity-50"
+        className="rounded-xl h-12 px-10 cursor-pointer bg-gray-100 mx-auto hover:opacity-50"
         onClick={() => signOut()}
       >
         Sign Out
