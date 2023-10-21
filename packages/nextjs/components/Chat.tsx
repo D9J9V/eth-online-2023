@@ -22,7 +22,7 @@ function Chat({ chatId }: Props) {
   );
 
   return (
-    <div className="bg-primary-content flex-1 overflow-y-auto overflow-x-hidden">
+    <div className="bg-primary flex-1 overflow-y-auto overflow-x-hidden">
       {messages?.empty && (
         <>
           <p className="mt-10 text-center text-white">Type a prompt to get started!</p>

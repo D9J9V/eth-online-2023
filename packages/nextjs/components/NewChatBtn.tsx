@@ -25,10 +25,15 @@ function NewChatBtn() {
   };
 
   return (
-    <div onClick={createNewChat} className="border-gray-700 border chatRow">
-      <p>New Chat</p>
-      <PlusCircleIcon className="h-4 w-4" />
-    </div>
+    <button
+      onClick={createNewChat}
+      className="w-full hover:animate-pulse drop-shadow-md grid justify-items-center border-gray-700 bg-gray-100 px-4 border rounded-xl chatRow"
+    >
+      <p>
+        <PlusCircleIcon className="inline h-4 w-4" />
+        <span> New Chat</span>
+      </p>
+    </button>
   );
 }
 

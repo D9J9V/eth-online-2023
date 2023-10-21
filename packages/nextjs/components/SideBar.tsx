@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import { db } from "../firebase";
+import ModelSelection from "./2ModelSelection";
 import ChatRow from "./ChatRow";
-import ModelSelection from "./ModelSelection";
 import NewChatBtn from "./NewChatBtn";
 import { collection, orderBy, query } from "firebase/firestore";
 import { signOut, useSession } from "next-auth/react";
@@ -21,7 +21,7 @@ function SideBar() {
   );
 
   return (
-    <div className="p-2 text-secondary flex flex-col h-screen">
+    <div className="p-2 text-neutral flex flex-col h-screen bg-secondary">
       <div className="flex-1">
         <div>
           {/* New Chat btn */}
@@ -33,7 +33,7 @@ function SideBar() {
 
           <div className="flex flex-col space-y-2 my-2">
             {loading && (
-              <div className="animating-pulse text-secondary-focus text-center ">
+              <div className="animating-pulse text-neutral text-center ">
                 <p>Loading Chats ...</p>
               </div>
             )}
@@ -60,6 +60,12 @@ function SideBar() {
           )}
         </div>
       )}
+      <button
+        className="rounded-xl h-12 px-10 cursor-pointer bg-primary mx-auto hover:opacity-50"
+        onClick={() => signOut()}
+      >
+        Sign Out
+      </button>
     </div>
   );
 }
