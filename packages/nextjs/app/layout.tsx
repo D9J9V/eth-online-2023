@@ -28,13 +28,13 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           ) : (
             <div className="flex">
               {/* Sidebar*/}
-              <div className="bg-neutral max-w-xs h-screen overflow-y-auto md:min-w-[20rem]">
+              <div className="max-w-xs h-screen overflow-y-auto md:min-w-[20rem]">
                 <SideBar />
               </div>
               {/* ClientProvider - Notifications*/}
               <ClientProvider />
 
-              <div className="bg-neutral flex-1"> {children}</div>
+              <div className="bg-primary flex-1"> {children}</div>
             </div>
           )}
         </SessionProvider>

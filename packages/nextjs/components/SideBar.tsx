@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import { db } from "../firebase";
+import ModelSelection from "./2ModelSelection";
 import ChatRow from "./ChatRow";
-import ModelSelection from "./ModelSelection";
 import NewChatBtn from "./NewChatBtn";
 import { collection, orderBy, query } from "firebase/firestore";
 import { signOut, useSession } from "next-auth/react";
@@ -21,7 +21,7 @@ function SideBar() {
   );
 
   return (
-    <div className="p-2 text-secondary flex flex-col h-screen">
+    <div className="p-2 text-gray-100 flex flex-col h-screen bg-neutral shadow-lg">
       <div className="flex-1">
         <div>
           {/* New Chat btn */}
@@ -33,7 +33,7 @@ function SideBar() {
 
           <div className="flex flex-col space-y-2 my-2">
             {loading && (
-              <div className="animating-pulse text-secondary-focus text-center ">
+              <div className="animating-pulse text-neutral text-center ">
                 <p>Loading Chats ...</p>
               </div>
             )}
@@ -47,7 +47,10 @@ function SideBar() {
       </div>
 
       {session && (
-        <div className="rounded-full h-12 w-12 cursor-pointer mb-2 mx-auto hover:opacity-50" onClick={() => signOut()}>
+        <div
+          className="rounded-full h-12 w-12 cursor-pointer mb-2 mx-auto hover:animate-pulse"
+          onClick={() => signOut()}
+        >
           {session.user?.image && (
             <Image
               src={session.user.image}
@@ -60,6 +63,12 @@ function SideBar() {
           )}
         </div>
       )}
+      <button
+        className="rounded-xl h-12 px-10 cursor-pointer bg-accent text-gray-700 mx-auto hover:animate-pulse"
+        onClick={() => signOut()}
+      >
+        Sign Out
+      </button>
     </div>
   );
 }
