@@ -27,7 +27,7 @@ function NewChatBtn() {
   return (
     <button
       onClick={createNewChat}
-      className="w-full hover:animate-pulse drop-shadow-md grid justify-items-center border-gray-700 bg-gray-100 px-4 border rounded-xl chatRow"
+      className="text-gray-700 w-full hover:animate-pulse drop-shadow-md grid justify-items-center border-gray-700 bg-gray-100 px-4 border rounded-xl chatRow"
     >
       <p>
         <PlusCircleIcon className="inline h-4 w-4" />

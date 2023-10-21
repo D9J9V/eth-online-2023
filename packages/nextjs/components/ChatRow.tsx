@@ -41,10 +41,20 @@ function ChatRow({ id }: Props) {
   const message = lastMessage?.data().text.substring(0, 14) || "New Chat";
 
   return (
-    <Link href={`/chat/${id}`} className={`chatRow justify-center ${active && "bg-grey-700/50"}`}>
-      <ChatBubbleLeftIcon className="h-5 w-5" />
-      <p className="flex-1 hidden md:inline-flex truncate">{message}</p>
-      <TrashIcon className="h-5 w-5 hover:text-red-700" onClick={removeChat} />
+    <Link
+      href={`/chat/${id}`}
+      className={`rounded-xl p-2 grid justify-items-stretch text-xs justify-start ${!active && "bg-primary"} ${
+        active && "bg-secondary"
+      }`}
+    >
+      <div>
+        <ChatBubbleLeftIcon className="inline h-5 w-5 justify-self-auto" />
+        <TrashIcon
+          className="h-5 w-5 inline hover:text-red-700 justify-self-auto hover:animate-pulse"
+          onClick={removeChat}
+        />
+      </div>
+      <p className="flex-1 hidden md:inline-flex truncate">{message + "..."}</p>
     </Link>
   );
 }
