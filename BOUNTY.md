@@ -15,9 +15,9 @@ https://sepolia.scrollscan.com/verifyContract-solc?a=0xd895D9059542e3CFa821B1A8f
 🔀 $2,500 Best use of zkEVM 
 https://testnet-zkevm.polygonscan.com/tx/0x25509a568e7abc06504d82333d022167dcb25764fea0132153e94ca24648cf8a
 
-# Mantle Deploy: Currently on 
-https://explorer.mantle.xyz/block/16942337/transactions!
+# Mantle Deploy: Currently on Testnet
 https://twitter.com/D9J9V/status/1716048475245215833 
+https://explorer.testnet.mantle.xyz/address/0x79D8Fd3e8393211a2548Deb37b1234B0aE79a04f
 
 # SAFE
 
