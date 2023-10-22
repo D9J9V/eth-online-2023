@@ -3,7 +3,7 @@ import { BanknotesIcon, BookOpenIcon, LockClosedIcon } from "@heroicons/react/20
 
 function HomePage() {
   return (
-    <div className="text-accent w-screen flex flex-col items-center justify-center h-screen px-2">
+    <div className="text-accent basis-1 flex flex-col  items-center justify-center h-screen px-2">
       <div className="flex space-x-2 text-center">
         <div>
           <div className="flex flex-col items-center justify-center mb-5">

@@ -14,9 +14,9 @@ type MetaHeaderProps = {
 const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/` : "/";
 
 export const MetaHeader = ({
-  title = "acc.dog",
+  title = "Geppetto",
   description = "The first web3 accounting software.",
-  image = "thumbnail.jpg",
+  image = "/logo6.png",
   twitterCard = "summary_large_image",
   children,
 }: MetaHeaderProps) => {
