@@ -1,8 +1,5 @@
-**DESCRIPTION:**
 
----
-
-**Geppetto: Decentralized Accountant with Web 3 embedded**
+# **Geppetto: Decentralized Accountant with Web 3 embedded**
 
 📖 **TL;DR**
 
