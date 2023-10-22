@@ -4,7 +4,7 @@ import { EntryPlaceholderArr } from "~~/utils/placeholders";
 
 const TableWithVisuals = () => {
   return (
-    <div className="overflow-x-auto">
+    <div className="bg-base-100 h-[99%] overflow-x-auto">
       <table className="table">
         {/* head */}
         <thead>

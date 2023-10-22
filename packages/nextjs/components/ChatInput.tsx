@@ -46,7 +46,7 @@ function ChatInput({ chatId }: Props) {
 
     await addDoc(collection(db, "users", session?.user?.email || "UnknownEmail", "chats", chatId, "messages"), message);
 
-    const notification = toast.loading("ChatGPT is thinking...");
+    const notification = toast.loading("Geppetto is thinking...");
 
     console.log("Sending data:", {
       prompt: input,
@@ -72,9 +72,9 @@ function ChatInput({ chatId }: Props) {
     console.log("API Response:", responseData);
 
     if (response.ok) {
-      toast.success("ChatGPT has responded!", { id: notification });
+      toast.success("Geppetto has responded!", { id: notification });
     } else {
-      toast.error("Something went wrong with ChatGPT.");
+      toast.error("Something went wrong with Geppetto.");
     }
   };
 

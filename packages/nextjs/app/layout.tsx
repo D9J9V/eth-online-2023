@@ -7,6 +7,8 @@ import SideBar from "@/components/SideBar";
 import "@rainbow-me/rainbowkit/styles.css";
 import type { Metadata } from "next";
 import { getServerSession } from "next-auth";
+import { Header } from "~~/components/Header";
+import { MetaHeader } from "~~/components/MetaHeader";
 import "~~/styles/globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -21,20 +23,24 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
   return (
     <html lang="en">
+      <MetaHeader />
       <body className={inter.className}>
         <SessionProvider session={session}>
           {!session ? (
             <Login />
           ) : (
-            <div className="flex">
+            <div className="flex flex-col">
+              <Header />
               {/* Sidebar*/}
-              <div className="max-w-xs h-screen overflow-y-auto md:min-w-[20rem]">
-                <SideBar />
-              </div>
-              {/* ClientProvider - Notifications*/}
               <ClientProvider />
+              <div className="flex flex-row shrink">
+                <div className=" md:min-w-[20rem]">
+                  <SideBar />
+                </div>
+                {/* ClientProvider - Notifications*/}
 
-              <div className="bg-primary flex-1"> {children}</div>
+                <div className="w-full bg-primary "> {children}</div>
+              </div>
             </div>
           )}
         </SessionProvider>
