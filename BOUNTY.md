@@ -7,8 +7,9 @@ https://studio.tableland.xyz/d9j9v/geppetto/deployments/default/balance_sheet
 
 # Scroll Deploy: Currently on Sepolia, (p.d. congrats on mainnet!)
 🎯Best on Scroll: (3x $2000, 10x $1000)
-https://sepolia.scrollscan.com/tx/0xa26c07212f1cc842600a958cb717a1ef126c01464894e05f620f8550a932ac84
-(Note: Currently trying to work out Verification, as an import (Regarding ERC721) is not happening correctly on Verification page)
+https://sepolia.scrollscan.com/address/0xd895D9059542e3CFa821B1A8f53517781586109a#code
+https://sepolia.scrollscan.com/verifyContract-solc?a=0xd895D9059542e3CFa821B1A8f53517781586109a&c=v0.8.21%2bcommit.d9974bed&lictype=1
+
 
 # PolygonZkEVM Deploy: Currently on Testnet
 🔀 $2,500 Best use of zkEVM 
