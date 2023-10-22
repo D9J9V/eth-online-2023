@@ -4,7 +4,7 @@ const query = async (prompt: string, _chatId: string, model: string): Promise<st
   try {
     const res = await openai.completions.create({
       model,
-      prompt,
+      prompt: `${prompt} Regresa solamente un asiento contable pertinente`,
       temperature: 0.9,
       top_p: 1,
       max_tokens: 1000,
