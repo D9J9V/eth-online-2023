@@ -47,7 +47,7 @@ function SideBar() {
 
       <div className="flex basis-[8%]">
         <button
-          className="grow rounded-xl h-12 px-10 cursor-pointer bg-accent text-neutral mx-auto hover:animate-pulse"
+          className="grow rounded-xl h-12 px-10 cursor-pointer bg-base-100 text-neutral mx-auto hover:animate-pulse"
           onClick={() => signOut()}
         >
           Sign Out
