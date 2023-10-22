@@ -22,7 +22,10 @@ As entrepreneurs, we've tasted the bitter pill of a startup's demise due to opaq
 
 **Geppetto's Architecture**
 
-DIAGRAMADIAGRAMADIAGRAMADIAGRAMADIAGRAMADIAGRAMADIAGRAMADIAGRAMADIAGRAMADIAGRAMADIAGRAMADIAGRAMADIAGRAMADIAGRAMADIAGRAMADIAGRAMADIAGRAMADIAGRAMADIAGRAMADIAGRAMADIAGRAMADIAGRAMADIAGRAMADIAGRAMADIAGRAMADIAGRAMADIAGRAMADIAGRAMADIAGRAMADIAGRAMADIAGRAMADIAGRAMADIAGRAMADIAGRAMA
+https://www.notion.so/d9j9v/What-is-Geppetto-1151ef3b64ee4eb19cce4aea968bebff?pvs=4#770733fe3bfd4473856962a0e71c4357
+https://www.notion.so/d9j9v/What-is-Geppetto-1151ef3b64ee4eb19cce4aea968bebff?pvs=4#d30d9d0f5411421490245ce98adb1052
+![image](https://github.com/D9J9V/eth-online-2023/assets/81653270/377961d8-0cd3-4818-89b0-446081c893d1)
+
 
 **The Promise of Decentralized Accounting**
 
@@ -99,6 +102,8 @@ For the ZK component, we used the Noir library. Our code ensures that double-ent
 In essence, our project brings together diverse technologies to address the twin challenges of permissioning and privacy in blockchain accounting. It's a harmonious blend of traditional accounting principles with cutting-edge cryptographic techniques, all aimed at ensuring transparency and trustworthiness in the blockchain space.
 
 Also, the user (employee, manager, or director) is enabled to search for data points or specific financial statements in the same way: with natural language sent messages in the chat format. In this way the software will, again, find categorized variables or accounting accounts, the database, or final dashboard and metric and give the output to the user.
+
+## Conceptual Framework
 
 The importance and greatness of Onchain accounting can be explained in a structured manner by first introducing the foundational concepts, presenting their advantages, and then addressing potential challenges and solutions. 
 
