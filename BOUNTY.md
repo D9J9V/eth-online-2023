@@ -26,16 +26,18 @@ With this control, we can transfer and mint ERC-20 tokens between different acco
 
 (Illustrative image of SAFE Wallet, however the SAFE SDK was used)To be eligible, developers must build with one of the following options:
 
-![Untitled](https://www.notion.so/d9j9v/What-is-Geppetto-1151ef3b64ee4eb19cce4aea968bebff?pvs=4#f5dbec55275f44e8890657bb2ddec005)
+![image](https://github.com/D9J9V/eth-online-2023/assets/81653270/2dd99dce-22ac-4381-85b9-5ddb3a31c56f)
 
-![Untitled](https://www.notion.so/d9j9v/What-is-Geppetto-1151ef3b64ee4eb19cce4aea968bebff?pvs=4#eea7aa241e4642acac30be73ab065b91)
+
+![image](https://github.com/D9J9V/eth-online-2023/assets/81653270/f7824fdb-c388-4a80-9bb6-968b86994461)
+
 
 [Safe{Core} Protocol](https://github.com/safe-global/safe-core-protocol-specs) (integrating or implementing any part of the Protocol). 
 
 [Safe{Core} Account Abstraction SDK](https://github.com/safe-global/safe-core-sdk) (integrating at least one of the existing kits).
 
 # Noir by Aztec
-
+```
 // Noir.
 use dep::std::hash::posseidon::bn254; //necesario pa hashear
 
@@ -67,3 +69,4 @@ fn main() {
         println!("La partida doble no es correcta.");
     }
 }
+```
