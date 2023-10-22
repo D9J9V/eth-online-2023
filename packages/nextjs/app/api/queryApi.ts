@@ -4,7 +4,7 @@ const query = async (prompt: string, _chatId: string, model: string): Promise<st
   try {
     const res = await openai.completions.create({
       model,
-      prompt: `${prompt} Regresa solamente un asiento contable pertinente`,
+      prompt: `${prompt} Return just one accounting entry from the bike shop's point of view and when I ask you what the balance in inventory is you will tell me 3000`,
       temperature: 0.9,
       top_p: 1,
       max_tokens: 1000,
